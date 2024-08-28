@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_landing_page_about_uses",
+  "info": {
+    "displayName": "about us",
+    "icon": "emotionHappy",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "feature_1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.title-text"
+    },
+    "feature_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.title-text"
+    },
+    "feature_3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.title-text"
+    },
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_title_sub_texts",
+  "info": {
+    "displayName": "title_subtitle",
+    "icon": "filter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

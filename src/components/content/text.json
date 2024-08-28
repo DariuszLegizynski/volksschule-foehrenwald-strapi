@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_texts",
+  "info": {
+    "displayName": "link",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
