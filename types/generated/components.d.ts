@@ -25,6 +25,20 @@ export interface ContentTitleSubText extends Schema.Component {
   };
 }
 
+export interface ContentTitleTextAnim extends Schema.Component {
+  collectionName: 'components_content_title_text_anims';
+  info: {
+    displayName: 'title_text_anim';
+    icon: 'check';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    animationType: Attribute.String;
+  };
+}
+
 export interface ContentTitleText extends Schema.Component {
   collectionName: 'components_content_title_texts';
   info: {
@@ -69,10 +83,8 @@ export interface LandingPageAboutUs extends Schema.Component {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    feature_1: Attribute.Component<'content.title-text'>;
-    feature_2: Attribute.Component<'content.title-text'>;
-    feature_3: Attribute.Component<'content.title-text'>;
     btn: Attribute.Component<'cta.btn'>;
+    features: Attribute.Component<'content.title-text-anim', true>;
   };
 }
 
@@ -128,6 +140,7 @@ declare module '@strapi/types' {
     export interface Components {
       'content.text': ContentText;
       'content.title-sub-text': ContentTitleSubText;
+      'content.title-text-anim': ContentTitleTextAnim;
       'content.title-text': ContentTitleText;
       'cta.btn': CtaBtn;
       'header.header': HeaderHeader;

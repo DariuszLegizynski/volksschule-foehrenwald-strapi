@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_content_title_text_anims",
+  "info": {
+    "displayName": "title_text_anim",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "animationType": {
+      "type": "string"
+    }
+  }
+}

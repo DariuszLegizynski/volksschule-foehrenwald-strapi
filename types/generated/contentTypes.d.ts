@@ -876,7 +876,6 @@ export interface ApiLandingPageLandingPage extends Schema.SingleType {
     about_us: Attribute.Component<'landing-page.about-us'>;
     news: Attribute.Component<'landing-page.news'>;
     foto_gallery: Attribute.Component<'landing-page.news'>;
-    contact: Attribute.Component<'landing-page.contact'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
