@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_cta_btns",
+  "info": {
+    "displayName": "btn"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

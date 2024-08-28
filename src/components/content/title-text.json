@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_title_texts",
+  "info": {
+    "displayName": "title_text",
+    "icon": "server",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_landing_page_news",
+  "info": {
+    "displayName": "media block",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.title-sub-text"
+    }
+  }
+}
