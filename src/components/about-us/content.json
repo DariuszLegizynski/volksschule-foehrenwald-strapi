@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_us_contents",
+  "info": {
+    "displayName": "content"
+  },
+  "options": {},
+  "attributes": {
+    "title_up": {
+      "type": "string"
+    },
+    "title_down": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

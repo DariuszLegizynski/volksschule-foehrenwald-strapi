@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_us_person_fotos",
+  "info": {
+    "displayName": "person_foto",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "profile": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string"
+    },
+    "other": {
+      "type": "string"
+    }
+  }
+}

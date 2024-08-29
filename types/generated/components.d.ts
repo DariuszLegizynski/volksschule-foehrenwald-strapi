@@ -1,5 +1,70 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface AboutUsClass extends Schema.Component {
+  collectionName: 'components_about_us_classes';
+  info: {
+    displayName: 'class';
+    icon: 'crop';
+  };
+  attributes: {
+    foto: Attribute.Media<'images' | 'videos'>;
+    class: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface AboutUsContent extends Schema.Component {
+  collectionName: 'components_about_us_contents';
+  info: {
+    displayName: 'content';
+  };
+  attributes: {
+    title_up: Attribute.String;
+    title_down: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface AboutUsKids extends Schema.Component {
+  collectionName: 'components_about_us_kids';
+  info: {
+    displayName: 'kids';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    classes: Attribute.Component<'about-us.class', true>;
+  };
+}
+
+export interface AboutUsPersonFoto extends Schema.Component {
+  collectionName: 'components_about_us_person_fotos';
+  info: {
+    displayName: 'person_foto';
+    icon: 'cube';
+  };
+  attributes: {
+    profile: Attribute.Media<'images'>;
+    name: Attribute.String & Attribute.Required;
+    position: Attribute.String;
+    other: Attribute.String;
+  };
+}
+
+export interface AboutUsTeam extends Schema.Component {
+  collectionName: 'components_about_us_teams';
+  info: {
+    displayName: 'team';
+    icon: 'alien';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    teachers: Attribute.Component<'about-us.person-foto', true>;
+  };
+}
+
 export interface ContentText extends Schema.Component {
   collectionName: 'components_content_texts';
   info: {
@@ -138,6 +203,11 @@ export interface LandingPageNews extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'about-us.class': AboutUsClass;
+      'about-us.content': AboutUsContent;
+      'about-us.kids': AboutUsKids;
+      'about-us.person-foto': AboutUsPersonFoto;
+      'about-us.team': AboutUsTeam;
       'content.text': ContentText;
       'content.title-sub-text': ContentTitleSubText;
       'content.title-text-anim': ContentTitleTextAnim;
