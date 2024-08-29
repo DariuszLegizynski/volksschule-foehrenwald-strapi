@@ -74,6 +74,7 @@ export interface ContentText extends Schema.Component {
   };
   attributes: {
     link: Attribute.String & Attribute.Required;
+    name: Attribute.String;
   };
 }
 
