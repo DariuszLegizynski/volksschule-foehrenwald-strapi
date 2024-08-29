@@ -822,6 +822,42 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
 }
 
+export interface ApiContactContact extends Schema.SingleType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_small_screen: Attribute.String & Attribute.Required;
+    title_larger_screen: Attribute.String & Attribute.Required;
+    name: Attribute.String;
+    street: Attribute.String;
+    city: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFotoGalleryFotoGallery extends Schema.CollectionType {
   collectionName: 'foto_galleries';
   info: {
@@ -982,6 +1018,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::contact.contact': ApiContactContact;
       'api::foto-gallery.foto-gallery': ApiFotoGalleryFotoGallery;
       'api::header.header': ApiHeaderHeader;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
