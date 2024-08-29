@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_about_us_classes",
+  "info": {
+    "displayName": "class",
+    "icon": "crop"
+  },
+  "options": {},
+  "attributes": {
+    "foto": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "class": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

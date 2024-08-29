@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "about us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "displayName": "content",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.content"
+    },
+    "team": {
+      "displayName": "team",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.team"
+    },
+    "kids": {
+      "displayName": "kids",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.kids"
+    },
+    "btn": {
+      "type": "string"
+    }
+  }
+}
