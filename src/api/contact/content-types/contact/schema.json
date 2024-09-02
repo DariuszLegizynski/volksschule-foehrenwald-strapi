@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact",
     "pluralName": "contacts",
-    "displayName": "contact"
+    "displayName": "contact",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,6 +34,16 @@
     },
     "email": {
       "type": "email"
+    },
+    "btn_privacy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
+    },
+    "btn_impressum": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
     }
   }
 }

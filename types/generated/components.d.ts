@@ -122,9 +122,11 @@ export interface CtaBtn extends Schema.Component {
   collectionName: 'components_cta_btns';
   info: {
     displayName: 'btn';
+    description: '';
   };
   attributes: {
     text: Attribute.String & Attribute.Required;
+    link: Attribute.String;
   };
 }
 
