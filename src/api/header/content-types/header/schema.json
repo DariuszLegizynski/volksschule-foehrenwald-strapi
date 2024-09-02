@@ -12,10 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "header": {
-      "type": "component",
-      "repeatable": false,
-      "component": "header.header"
+    "headers": {
+      "type": "dynamiczone",
+      "components": [
+        "header.header",
+        "header.sub-header"
+      ]
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -788,12 +788,45 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutUsAboutUs extends Schema.SingleType {
-  collectionName: 'about_uses';
+export interface ApiAboutClassAboutClass extends Schema.SingleType {
+  collectionName: 'about_classes';
   info: {
-    singularName: 'about-us';
-    pluralName: 'about-uses';
-    displayName: 'about us';
+    singularName: 'about-class';
+    pluralName: 'about-classes';
+    displayName: 'about-class';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.Component<'about-us.content'>;
+    kids: Attribute.Component<'about-us.kids'>;
+    btn: Attribute.Component<'cta.btn'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-class.about-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-class.about-class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAboutTeacherAboutTeacher extends Schema.SingleType {
+  collectionName: 'about_teachers';
+  info: {
+    singularName: 'about-teacher';
+    pluralName: 'about-teachers';
+    displayName: 'about-teacher';
     description: '';
   };
   options: {
@@ -802,19 +835,18 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   attributes: {
     content: Attribute.Component<'about-us.content'>;
     team: Attribute.Component<'about-us.team'>;
-    kids: Attribute.Component<'about-us.kids'>;
-    btn: Attribute.String;
+    btn: Attribute.Component<'cta.btn'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::about-us.about-us',
+      'api::about-teacher.about-teacher',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::about-us.about-us',
+      'api::about-teacher.about-teacher',
       'oneToOne',
       'admin::user'
     > &
@@ -912,7 +944,8 @@ export interface ApiHeaderHeader extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    header: Attribute.Component<'header.header'>;
+    headers: Attribute.DynamicZone<['header.header', 'header.sub-header']>;
+    logo: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1018,7 +1051,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
-      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::about-class.about-class': ApiAboutClassAboutClass;
+      'api::about-teacher.about-teacher': ApiAboutTeacherAboutTeacher;
       'api::contact.contact': ApiContactContact;
       'api::foto-gallery.foto-gallery': ApiFotoGalleryFotoGallery;
       'api::header.header': ApiHeaderHeader;

@@ -1,14 +1,12 @@
 {
   "collectionName": "components_about_us_contents",
   "info": {
-    "displayName": "content"
+    "displayName": "content",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title_up": {
-      "type": "string"
-    },
-    "title_down": {
+    "title": {
       "type": "string"
     },
     "description": {

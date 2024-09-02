@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "about_uses",
+  "collectionName": "about_classes",
   "info": {
-    "singularName": "about-us",
-    "pluralName": "about-uses",
-    "displayName": "about us",
+    "singularName": "about-class",
+    "pluralName": "about-classes",
+    "displayName": "about-class",
     "description": ""
   },
   "options": {
@@ -13,25 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "content": {
-      "displayName": "content",
       "type": "component",
       "repeatable": false,
       "component": "about-us.content"
     },
-    "team": {
-      "displayName": "team",
-      "type": "component",
-      "repeatable": false,
-      "component": "about-us.team"
-    },
     "kids": {
-      "displayName": "kids",
       "type": "component",
       "repeatable": false,
       "component": "about-us.kids"
     },
     "btn": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
     }
   }
 }

@@ -17,10 +17,10 @@ export interface AboutUsContent extends Schema.Component {
   collectionName: 'components_about_us_contents';
   info: {
     displayName: 'content';
+    description: '';
   };
   attributes: {
-    title_up: Attribute.String;
-    title_down: Attribute.String;
+    title: Attribute.String;
     description: Attribute.Text;
   };
 }
@@ -135,8 +135,20 @@ export interface HeaderHeader extends Schema.Component {
     description: '';
   };
   attributes: {
-    logo: Attribute.Media<'images'>;
     header: Attribute.Component<'content.text', true>;
+  };
+}
+
+export interface HeaderSubHeader extends Schema.Component {
+  collectionName: 'components_header_sub_headers';
+  info: {
+    displayName: 'subHeader';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    subHeader: Attribute.Component<'content.text', true>;
+    name: Attribute.String;
   };
 }
 
@@ -215,6 +227,7 @@ declare module '@strapi/types' {
       'content.title-text': ContentTitleText;
       'cta.btn': CtaBtn;
       'header.header': HeaderHeader;
+      'header.sub-header': HeaderSubHeader;
       'landing-page.about-us': LandingPageAboutUs;
       'landing-page.contact': LandingPageContact;
       'landing-page.hero': LandingPageHero;

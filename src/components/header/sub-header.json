@@ -1,15 +1,19 @@
 {
-  "collectionName": "components_header_headers",
+  "collectionName": "components_header_sub_headers",
   "info": {
-    "displayName": "header",
+    "displayName": "subHeader",
+    "icon": "bulletList",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "header": {
+    "subHeader": {
       "type": "component",
       "repeatable": true,
       "component": "content.text"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

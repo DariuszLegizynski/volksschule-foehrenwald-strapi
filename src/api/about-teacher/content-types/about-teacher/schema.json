@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_teachers",
+  "info": {
+    "singularName": "about-teacher",
+    "pluralName": "about-teachers",
+    "displayName": "about-teacher",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.content"
+    },
+    "team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.team"
+    },
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
+    }
+  }
+}
