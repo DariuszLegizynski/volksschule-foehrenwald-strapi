@@ -14,7 +14,12 @@
       "type": "text"
     },
     "animationType": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "animation-learning",
+        "animation-playing",
+        "animation-eco"
+      ]
     }
   }
 }

@@ -101,7 +101,9 @@ export interface ContentTitleTextAnim extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    animationType: Attribute.String;
+    animationType: Attribute.Enumeration<
+      ['animation-learning', 'animation-playing', 'animation-eco']
+    >;
   };
 }
 
