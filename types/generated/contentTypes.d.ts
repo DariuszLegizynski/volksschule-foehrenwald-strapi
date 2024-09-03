@@ -1049,8 +1049,9 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
   };
   attributes: {
     content: Attribute.Blocks;
-    link: Attribute.String;
-    text: Attribute.String;
+    link: Attribute.Component<'cta.btn'>;
+    title: Attribute.String;
+    btn: Attribute.Component<'cta.btn'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

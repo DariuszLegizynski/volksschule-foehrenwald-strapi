@@ -16,10 +16,17 @@
       "type": "blocks"
     },
     "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
+    },
+    "title": {
       "type": "string"
     },
-    "text": {
-      "type": "string"
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.btn"
     }
   }
 }
