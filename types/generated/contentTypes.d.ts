@@ -967,6 +967,40 @@ export interface ApiHeaderHeader extends Schema.SingleType {
   };
 }
 
+export interface ApiImpressumImpressum extends Schema.SingleType {
+  collectionName: 'impressums';
+  info: {
+    singularName: 'impressum';
+    pluralName: 'impressums';
+    displayName: 'impressum';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    content: Attribute.Blocks;
+    link: Attribute.Component<'cta.btn'>;
+    btn: Attribute.Component<'cta.btn'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::impressum.impressum',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::impressum.impressum',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Schema.SingleType {
   collectionName: 'landing_pages';
   info: {
@@ -1093,6 +1127,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::foto-gallery.foto-gallery': ApiFotoGalleryFotoGallery;
       'api::header.header': ApiHeaderHeader;
+      'api::impressum.impressum': ApiImpressumImpressum;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::news-item.news-item': ApiNewsItemNewsItem;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
