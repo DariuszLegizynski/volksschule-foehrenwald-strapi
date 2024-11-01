@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_content_text_link_images",
+  "info": {
+    "displayName": "Text_Link_Image_Bool",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "isVisible": {
+      "type": "boolean",
+      "default": false
+    },
+    "author": {
+      "type": "string"
+    },
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

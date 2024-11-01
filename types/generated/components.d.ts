@@ -65,6 +65,22 @@ export interface AboutUsTeam extends Schema.Component {
   };
 }
 
+export interface ContentTextLinkImage extends Schema.Component {
+  collectionName: 'components_content_text_link_images';
+  info: {
+    displayName: 'Text_Link_Image_Bool';
+    icon: 'attachment';
+    description: '';
+  };
+  attributes: {
+    link: Attribute.String;
+    image: Attribute.Media<'images' | 'videos'>;
+    isVisible: Attribute.Boolean & Attribute.DefaultTo<false>;
+    author: Attribute.String;
+    text: Attribute.Blocks;
+  };
+}
+
 export interface ContentText extends Schema.Component {
   collectionName: 'components_content_texts';
   info: {
@@ -208,6 +224,7 @@ export interface LandingPageHero extends Schema.Component {
     btn_left: Attribute.Component<'cta.btn'>;
     btn_right: Attribute.Component<'cta.btn'>;
     background_media: Attribute.Media<'images' | 'videos'> & Attribute.Required;
+    announcement: Attribute.Component<'content.text-link-image'>;
   };
 }
 
@@ -232,6 +249,7 @@ declare module '@strapi/types' {
       'about-us.kids': AboutUsKids;
       'about-us.person-foto': AboutUsPersonFoto;
       'about-us.team': AboutUsTeam;
+      'content.text-link-image': ContentTextLinkImage;
       'content.text': ContentText;
       'content.title-sub-text': ContentTitleSubText;
       'content.title-text-anim': ContentTitleTextAnim;

@@ -28,13 +28,18 @@
       "component": "cta.btn"
     },
     "background_media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
+    },
+    "announcement": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.text-link-image"
     }
   }
 }
